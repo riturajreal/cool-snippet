@@ -70,7 +70,28 @@ export default function CodeEditor({
         className='resizable_container relative  bg-red-500'
 
     >
-        <div>
+        <div className='code_block'>
+            <div className='code_title h-[52px] px-4 flex items-center justify-between bg-black opacity-80'>
+
+                {/* controls */}
+                <div className='dots flex items-center gap-1'>
+                    <div className='w-3 h-3 rounded-full bg-[#ff5656]'></div>
+                    <div className='w-3 h-3 rounded-full bg-[#ffbc6a]'></div>
+                    <div className='w-3 h-3 rounded-full bg-[#67f772]'></div>
+                </div>
+
+                {/* Snippet Title */}
+                <div className='input_control w-full'>
+                        <input type="text" className='w-full text-[hsla(0,0%,100%,0.6) outline-none font-medium bg-transparent text-center ' />
+                </div>
+
+                {/* Language Icon */}
+                <div className='icon flex justify-center items-center p-1 bg-black opacity-30 rounded-md'>
+                        <img src={icon} alt="language_icon" />
+                </div>
+            </div>
+
+
             <AceEditor
             value={`function(){
     console.log("hello");
