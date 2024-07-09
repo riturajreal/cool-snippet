@@ -2,32 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+body{
+  background:#0d0d0d;
+  color: #848484;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.ace_editor_container{
+  width: 100% !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.ace_editor{  
+  background-color: rgba(0,0,0,0.5);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top:none;
+  box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+  border: 2px solid rgba(249,249,249, 0.08);
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 1.5rem !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.ace_content{
+  width: 100% !important;
+  top: 12px !important;
+  left: 12px !important;
+}
+
+.ace_scrollbar{
+  display: none !important;
+}
+
+.ace_scroller{
+  width: 100% !important;
 }
